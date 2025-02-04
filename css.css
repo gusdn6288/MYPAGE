@@ -268,9 +268,9 @@ padding-left: 50pt;
 
 
 .hoverImg:hover{
-  background-image: url("/img/black\ star.png") ;
+  background-image: url("img/black\ star.png") ;
   width:55px;
-  content: url("/img/star.png");
+  content: url("img/star.png");
   display: inline-block;
 	margin-top: -10px;
 	-webkit-transition: .5s ease-in-out;
