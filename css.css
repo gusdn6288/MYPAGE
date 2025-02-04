@@ -1,0 +1,474 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* 가로 스크롤 방지 */
+  font-size: 2vh;
+
+}
+
+span{
+font-family: SKYY;
+}
+
+p{
+  font-size: 12vw;
+  font-family: MYYY ;
+}
+
+
+section {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 0 -120px;
+  height: 100vh;
+}
+
+
+
+
+
+@keyframes backgroundChange {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+.blink {
+  animation: blink 0.5s infinite;
+  font-size: 2.5rem;
+}
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+
+.text_box {
+  font-size: 4vmax;
+  text-align: center;
+  width: auto;
+  height: 100px;
+  top: 40%;
+  left: 50%;
+  position: relative;
+  color: white;
+  transform: translate(-50%, -50%);
+}
+
+#home {
+  background-image: url("img/sky.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 110%;
+}
+
+#home .text1 {
+  width: auto;
+  height: 60px;
+  font-size: 1.5vmax;
+  position: relative;
+  top: 40%;
+  left: 85%;
+  color: white;
+  transform: translate(-50%, -50%);
+ 
+}
+
+
+#section1 .about{
+  width: 80%;
+  height: 60%;
+  border: 1px solid white;
+  border-radius: 15px;
+  display: flex;
+  overflow: auto;
+}
+
+
+#section2 .about{
+  width: 90%;
+  height: 80%;
+  border: 1px solid white;
+  border-radius: 15px;
+  display:table;
+  table-layout:fixed;
+}
+
+
+
+#section1 {
+  background: linear-gradient(-45deg, #1d2c41, #B7C9D9, #4FA3F0, #22131a);
+  background-repeat: no-repeat;
+  background-size: 400% 400%;
+  position: relative;
+  animation: backgroundChange 15s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-wrap: wrap;
+  
+}
+
+
+#section1.text1 {
+  width: auto;
+  height: 60px;
+  font-size: 1.5vmax;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* 화면이 작아지면 요소가 다음 줄로 넘어감 */
+  justify-content: center; /* 아이템들을 가운데 정렬 */
+  width: 100%; /* 반응형으로 크기 조정 */
+  max-width: 650px; /* 최대 크기 */
+  min-width: 100px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 
+              0 2px 2px rgba(0, 0, 0, 0.12), 
+              0 4px 4px rgba(0, 0, 0, 0.12), 
+              0 8px 8px rgba(0, 0, 0, 0.12),
+              0 16px 16px rgba(0, 0, 0, 0.12);
+  position: relative; /* 위치 변경 */
+  background-color: white;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+  margin: 30pt;
+  margin-top: 5%;
+  overflow: auto;
+  height: 70%;
+
+}
+
+#section1 .img{
+width: 300px;
+height: 70%;
+padding: 10px;
+display: block;
+padding-left: 50pt;
+}
+
+.profile-img
+{
+    flex: 1; /* 이미지 크기를 조정할 수 있도록 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+
+
+.profile-text
+{
+  border: 4px solid gray;
+  border-radius: 30px;
+  flex: 1;
+  height: 270px;
+  padding-left:30px;
+  margin-top: 70px;
+  margin-left: 30px;
+  margin-right: 30px;
+
+}
+.dicey li {
+  margin-left:35px;
+  position:relative;
+  margin-bottom:0.25em;
+  font-family: MYYY;
+   margin: 30px 0px;
+   margin-left: 100px;
+  list-style: none
+
+}
+
+
+
+
+.dicey li:nth-child(1n):before {position:absolute;left:-1em;}
+.dicey li:nth-child(1):before {content: "\2680";}
+.dicey li:nth-child(2):before {content: "\2681";}
+.dicey li:nth-child(3):before {content: "\2682";}
+.dicey li:nth-child(4):before {content: "\2683";}
+
+
+
+.profile-info {
+  border: 4px solid gray;
+  border-radius: 30px;
+  flex: 2;
+  
+  height: 270px;
+  padding-left:20px;
+  margin-top: 70px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.profile-info p {
+  font-size: 18px;
+  color: #333;
+  margin: 30px 0;
+}
+
+.profile-info strong {
+  color: #555;
+  font-weight: bold;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .item,
+  .itema {
+    width: 95%; /* 모바일 화면에서 넓이를 조정 */
+    height: auto; /* 높이를 자동으로 조정 */
+  }
+  .text_box {
+    font-size: 3vmax;
+  }
+}
+@font-face {
+  font-family: MYYY;
+  src: url(Jalnan2TTF.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: SKYY;
+  src: url(Cafe24Shiningstar-v2.0.ttf);
+  font-weight: bold;
+}
+
+.navbar
+{
+  margin-top: 5px;
+  text-align: center;
+  position: fixed  ;
+  z-index:  1;
+  left: 43%;
+  height: auto;
+  padding: 0;
+}
+
+
+.hoverImg:hover{
+  background-image: url("/img/black\ star.png") ;
+  width:55px;
+  content: url("/img/star.png");
+  display: inline-block;
+	margin-top: -10px;
+	-webkit-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+  
+}
+
+#section2
+{
+  height: 160%;
+  background: linear-gradient(90deg, #141414, #2b333b);
+  background-repeat: no-repeat;
+  background-size: 400% 400%;
+  position: relative;
+  animation: backgroundChange 5s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+#section2 .htitle
+{
+
+  margin-top: 10pt;
+  font-family: MYYY;
+  color: white;
+  font-size: 40px;
+  margin-top: 40px;
+  margin-left: 100px;
+  margin-bottom: 0;
+}
+hr {
+  width : auto;
+  height : 5px;
+  background-color : white;
+  margin-left: 100px;
+  margin-right: 100px;  
+}
+
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  width: 70%;
+}
+
+h4{
+  position: absolute;
+  font-size: x-large;
+  text-align: left;
+  margin-top: 10pt;
+  font-family: MYYY;
+
+}
+
+.pp{
+  font-size: 1.5vmax;
+    font-family: MYYY;
+    margin-left : 80pt;
+    color: white;
+  
+}
+
+
+#section2 .sdiv{
+  display: flex;
+  margin-left: 100px;
+    align-items: left;
+    width: auto;
+    height: auto;
+    color: white;
+
+}
+#section2 .img{
+  width: 250px;
+  height: 400px;
+  margin-right: 30px;
+  border-radius:  30px;
+}
+
+#section2 .ptext{
+  font-size: 15pt;
+    margin-left : 80pt;
+    color: white;
+    margin-top: 30px;
+
+}
+
+
+/* 트럭 */
+
+.loader {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top:3%;
+  left: 43%;
+
+}
+
+.truckWrapper {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  overflow-x: hidden;
+}
+/* truck upper body */
+.truckBody {
+  width: 130px;
+  height: fit-content;
+  margin-bottom: 6px;
+  animation: motion 1s linear infinite;
+}
+/* truck suspension animation*/
+@keyframes motion {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* truck's tires */
+.truckTires {
+  width: 130px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px 0px 15px;
+  position: absolute;
+  bottom: 0;
+}
+.truckTires svg {
+  width: 24px;
+}
+
+.road {
+  width: 100%;
+  height: 1.5px;
+  background-color: #282828;
+  position: relative;
+  bottom: 0;
+  align-self: flex-end;
+  border-radius: 3px;
+}
+.road::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background-color: #282828;
+  right: -50%;
+  border-radius: 3px;
+  animation: roadAnimation 1.4s linear infinite;
+  border-left: 10px solid white;
+}
+.road::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  background-color: #282828;
+  right: -65%;
+  border-radius: 3px;
+  animation: roadAnimation 1.4s linear infinite;
+  border-left: 4px solid white;
+}
+
+.lampPost {
+  position: absolute;
+  bottom: 0;
+  right: -90%;
+  height: 90px;
+  animation: roadAnimation 1.4s linear infinite;
+}
+
+@keyframes roadAnimation {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-350px);
+  }
+}
+
+
+
