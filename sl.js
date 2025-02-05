@@ -1,4 +1,4 @@
-const content = "Hello, Eureca. . .";
+const content = "Hello, Ureca. . .";
 const text = document.querySelector(".text");
 let i = 0;
 
